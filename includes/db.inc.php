@@ -12,15 +12,12 @@ class Database
 
 	public function connection()
 	{
-		$this->hostname = "sql1.njit.edu";
-		$this->username = "cd395";
-		$this->password="@Xgl731crv10";
-		$this->dbname="cd395";
+	
 
-		// $this->hostname = "localhost";
-		// $this->username = "root";
-		// $this->password="";
-		// $this->dbname="users";
+		$this->hostname = "localhost";
+		$this->username = "root";
+		$this->password="";
+		$this->dbname="users";
 		
 		// Connect to database
 		try{
