@@ -1,0 +1,64 @@
+
+.input-error
+{
+	font-weight:  bold;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	color: red;
+}
+
+.signup-form
+{
+	margin-top: 2rem;
+}
+
+.user-info 
+{
+	background-color: rgba(0, 0, 0, 0.068);
+	height: 100px;
+	margin-top: 1rem;
+	border-radius: 4px;
+	display: grid;
+	place-items: center;
+}
+
+.user-information
+{
+	height: auto;
+	padding: 1rem;
+}
+
+h4 
+{
+	font-weight: 400;
+}
+
+.completed-tasks, .in-progress
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+
+}
+
+.completed-tasks
+{
+	background-color: #0d6efd;
+}
+
+.in-progress
+{
+	background-color: #198754;
+}
+
+
+.task-info
+{
+	display: flex;
+	width: 220px;
+	height: 50px;
+	justify-content: space-around;
+	align-items: center;
+}
+
