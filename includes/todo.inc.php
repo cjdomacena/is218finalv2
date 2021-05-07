@@ -12,13 +12,14 @@ if (!isset($_POST["submit"])) {
 	$urgency = $_POST["urgency"];
 	$user_id = $_SESSION["userId"];
 	$is_done = $_SESSION["is_done"];
-	echo "$is_done";
+	// echo "$is_done";
+
+
 
 	$sql = "INSERT INTO todo(title, due_date,description, urgency, user_id, is_done)
-	values(?,?,?,?,?,?)";
+	values('$title', '$date', '$description', '$urgency', '$user_id', false)";
 	$stmt = $connection->connection()->prepare($sql);
-	$stmt->execute([$title, $date, $description, $urgency, $user_id, false]);
-
+	$stmt->execute();
 
 
 	unset($_SESSION["todo"]);
@@ -31,9 +32,10 @@ if (!isset($_POST["submit"])) {
 	unset($_SESSION["sorted"]);
 	$sql = "SELECT * FROM todo WHERE user_id = ? ORDER BY urgency DESC";
 	$stmt = $connection->connection()->prepare($sql);
-	$stmt->execute([$_SESSION["userId"]]);
+	$stmt->execute([$user_id]);
 	$todo = $stmt->fetchAll();
 	$_SESSION["sorted"] = $todo;
+
 
 	header("location: ../dashboard.php?sucess=taskadded");
 	exit();

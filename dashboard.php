@@ -332,7 +332,7 @@ echo "<h5>Completed: $completed%</h5>";
 
             echo '
               <label for="is_done" class="col-form-label  fw-bolder">Is Done(Type: yes or no)</label>
-              <input type="boolean" class="form-control" name="is_done"  value =No>
+              <input type="boolean" class="form-control" name="is_done">
             </div>';
 
             echo '

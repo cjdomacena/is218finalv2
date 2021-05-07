@@ -14,11 +14,14 @@ class Database
 	{
 	
 
+
 		$this->hostname = "localhost";
 		$this->username = "root";
 		$this->password="";
 		$this->dbname="users";
-		
+
+
+
 		// Connect to database
 		try{
 			$this->conn = 

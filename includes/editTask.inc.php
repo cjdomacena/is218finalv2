@@ -17,17 +17,17 @@ if(!isset($_POST["submit"]))
 	$is_done = $_POST["is_done"];
 	$user_id = $_SESSION["userId"];
 
+
 	if(strtolower($is_done) == "yes")
 	{
-		$is_done = true;
+		$is_done = 1;
 	}
-	else 
+	else if(strtolower($is_done == "no"))
 	{
-		$is_done = false;
+		$is_done = 0;
 	}
 
-
-
+	
 	$sql = "UPDATE todo SET title = '$title', description = '$description', due_date = '$date', urgency = '$urgency', is_done = '$is_done' WHERE todo_id = '$todo_id' ";
 	$stmt = $connection->connection()->prepare($sql);
 	$stmt->execute();
